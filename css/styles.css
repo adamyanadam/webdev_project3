@@ -186,6 +186,11 @@ body.food-page .ingredient-column {
   margin-right: 2%;
 }
 
+body.food-page .recipe-video {
+  width: 100%;
+  border: 0;
+}
+
 /*page 4 map page*/
 body.map-page .content {
   width: 90%;
