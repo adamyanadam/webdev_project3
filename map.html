@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>College Map - My Journey to College</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body class="map-page">
+    <header>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Homepage</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="FavoriteFood.html">Favorite Food</a></li>
+          <li><a href="map.html">College Map</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content">
+      <h1>College Locations Map</h1>
+      <p>Click the pin to view the school I am interested in.</p>
+      <div id="map"></div>
+      <button type="button" id="questions-btn">Questions</button>
+    </main>
+
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap"></script>
+  </body>
+</html>
