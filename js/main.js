@@ -22,19 +22,19 @@ function initMap() {
     zoom: 7.4
   });
 
-  //feature 1: box around urbana-champaign
+  //feature 1: box around urbana
   new google.maps.Rectangle({
-    strokeColor: "#b91c1c",
-    strokeOpacity: 1,
-    strokeWeight: 3,
-    fillColor: "#ef4444",
-    fillOpacity: 0.25,
+    strokeColor: "#6a0000",
+    strokeOpacity: 0.9,
+    strokeWeight: 2,
+    fillColor: "#ff0000",
+    fillOpacity: 0.2,
     map: map,
     bounds: {
-      north: 40.20,
-      south: 40.00,
-      east: -88.12,
-      west: -88.34
+      north: 40.16,
+      south: 40.04,
+      east: -88.15,
+      west: -88.31
     }
   });
 
@@ -82,13 +82,25 @@ function initMap() {
 
   //feature 3: highlighted radius circle around chicago
   new google.maps.Circle({
-    strokeColor: "#0a0908",
+    strokeColor: "#1b00a1",
     strokeOpacity: 0.85,
     strokeWeight: 2,
-    fillColor: "#3b82f6",
+    fillColor: "#0062ffed",
     fillOpacity: 0.2,
     map: map,
-    center: { lat: 41.8781, lng: -87.6298 },
+    center: { lat: 41.8818, lng: -87.6232 },
     radius: 9000
+  });
+
+  //feature 4: polyline from chicago to urbana-champaign
+  new google.maps.Polyline({
+    path: [
+      { lat: 41.8818, lng: -87.6232 },
+      { lat: 40.10384802075491, lng: -88.23042692420965 }
+    ],
+    strokeColor: "#00ff22",
+    strokeOpacity: 0.9,
+    strokeWeight: 2,
+    map: map
   });
 }
