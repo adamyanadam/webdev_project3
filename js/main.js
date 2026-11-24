@@ -14,25 +14,31 @@ function initMap() {
     return;
   }
 
-  //feature 1: turning off other points of interest
-  var customStyles = [
-    {
-      featureType: "poi",
-      elementType: "labels",
-      stylers: [{ visibility: "off" }]
-    }
-  ];
-
   //center coordinates between chicago and uiuc
   var center = { lat: 40.99, lng: -87.93 };
 
   var map = new google.maps.Map(mapElement, {
     center: center,
-    zoom: 7.4,
-    styles: customStyles
+    zoom: 7.4
   });
 
-  //feature 2: markers with infowindows of the school name for each 
+  //feature 1: box around urbana
+  new google.maps.Rectangle({
+    strokeColor: "#b91c1c",
+    strokeOpacity: 0.9,
+    strokeWeight: 2,
+    fillColor: "#ef4444",
+    fillOpacity: 0.2,
+    map: map,
+    bounds: {
+      north: 40.16,
+      south: 40.04,
+      east: -88.15,
+      west: -88.31
+    }
+  });
+
+  //feature 2: markers with infowindows of the school name for each
   var schools = [
     {
       title: "Illinois Institute of Technology - Stuart School of Business",
