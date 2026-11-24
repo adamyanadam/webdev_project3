@@ -22,19 +22,19 @@ function initMap() {
     zoom: 7.4
   });
 
-  //feature 1: box around urbana
+  //feature 1: box around urbana-champaign
   new google.maps.Rectangle({
     strokeColor: "#b91c1c",
-    strokeOpacity: 0.9,
-    strokeWeight: 2,
+    strokeOpacity: 1,
+    strokeWeight: 3,
     fillColor: "#ef4444",
-    fillOpacity: 0.2,
+    fillOpacity: 0.25,
     map: map,
     bounds: {
-      north: 40.16,
-      south: 40.04,
-      east: -88.15,
-      west: -88.31
+      north: 40.20,
+      south: 40.00,
+      east: -88.12,
+      west: -88.34
     }
   });
 
